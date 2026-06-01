@@ -1,0 +1,211 @@
+\begin{thebibliography}{10}
+
+\bibitem{yannakakis2025artificial}
+Georgios~N. Yannakakis and Julian Togelius.
+\newblock {\em {Artificial Intelligence and Games}}.
+\newblock Springer Nature, 2 edition, 2025.
+
+\bibitem{Newborn2011Kasparov}
+Monty Newborn.
+\newblock {\em Kasparov versus Deep Blue: Computer Chess Comes of Age}.
+\newblock Springer, 2011.
+
+\bibitem{schaeffer1996chinook}
+Jonathan Schaeffer, Robert Lake, Paul Lu, and Martin Bryant.
+\newblock Chinook: The world man-machine checkers champion.
+\newblock {\em AI Magazine}, 17(1):21--29, 1996.
+
+\bibitem{silver2016mastering}
+David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George Van Den~Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of go with deep neural networks and tree search.
+\newblock {\em Nature}, 529(7587):484--489, 2016.
+
+\bibitem{ParlettPokerHistory}
+David Parlett.
+\newblock Poker - a brief history.
+
+\bibitem{kirschenbaum2016}
+Matthew Kirschenbaum.
+\newblock Kriegsspiel.
+\newblock In Henry Lowood and Raiford Guins, editors, {\em Debugging Game History: A Critical Lexicon}. MIT Press, 2016.
+
+\bibitem{attaque_boardgame}
+Hermance Edan.
+\newblock L'attaque.
+\newblock Jeu de société, 1909.
+\newblock Premier brevet déposé en 1909. Édité par H.P. Gibson \& Sons à partir des années 1920.
+
+\bibitem{stratego:boardgame}
+Stratego.
+\newblock Board Game, 1946.
+\newblock Two-player strategy board game based on {L'Attaque}.
+
+\bibitem{battleshipgame}
+{Milton Bradley} and {Hasbro}.
+\newblock Battleship.
+\newblock Board game, 1967.
+\newblock Originally played as "Salvo" or "Broadsides" during World War I; commercialized versions developed later.
+
+\bibitem{russell2020artificial}
+Stuart Russell and Peter Norvig.
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Pearson, 4 edition, 2020.
+
+\bibitem{kaelbling1998planning}
+Leslie~Pack Kaelbling, Michael~L Littman, and Anthony~R Cassandra.
+\newblock Planning and acting in partially observable stochastic domains.
+\newblock {\em Artificial Intelligence}, 101(1-2):99--134, 1998.
+
+\bibitem{gaina2020tag}
+Raluca~D. Gaina, Martin Balla, Alexander Dockhorn, Raul Montoliu, and Diego Perez-Liebana.
+\newblock {TAG: A Tabletop Games Framework}.
+\newblock In {\em {Experimental AI in Games (EXAG), AIIDE 2020 Workshop}}, 2020.
+
+\bibitem{piette2020ludii}
+Éric Piette, Dennis~J.N.J. Soemers, Matthew Stephenson, Chiara~F. Sironi, Mark~H.M. Winands, and Cameron Browne.
+\newblock Ludii - the ludemic general game system.
+\newblock In {\em 2020 European Conference on Artificial Intelligence}, volume 325 of {\em Frontiers in Artificial Intelligence and Applications}, pages 411--418. IOS Press, 2020.
+
+\bibitem{browne2020ludii_language}
+Cameron Browne, Dennis J. N.~J. Soemers, Eric Piette, Matthew Stephenson, and Walter Crist.
+\newblock Ludii language reference.
+\newblock Technical report, Maastricht University, 2020.
+
+\bibitem{crist2024ludii_database}
+Walter Crist, Matthew Stephenson, Eric Piette, and Cameron Browne.
+\newblock The ludii games database: A resource for computational and cultural research on traditional board games.
+\newblock {\em Digital Humanities Quarterly}, 18(4), 2024.
+
+\bibitem{stephenson2019competition}
+Matthew Stephenson, Eric Piette, Dennis J. N.~J. Soemers, and Cameron Browne.
+\newblock Ludii as a competition platform.
+\newblock In {\em Proceedings of the IEEE Conference on Games (CoG)}, 2019.
+
+\bibitem{Genesereth2005GeneralGP}
+Michael~R. Genesereth, Nathaniel Love, and Barney Pell.
+\newblock General game playing: Overview of the aaai competition.
+\newblock {\em AI Magazine}, 26(2):62--72, 2005.
+
+\bibitem{Love+al:2006}
+Nathaniel Love, Timothy Hinrichs, David Haley, Eric Schkufza, and Michael Genesereth.
+\newblock General game playing: Game description language specification.
+\newblock Technical Report LG-2006-01, Stanford Logic Group, Stanford, California, 2006.
+
+\bibitem{browne2012survey}
+Cameron Browne, Edward Powley, Daniel Whitehouse, Simon Lucas, Peter Cowling, Philipp Rohlfshagen, Stephen Tavener, Diego Perez, Spyridon Samothrakis, and Simon Colton.
+\newblock A survey of {Monte Carlo} tree search methods.
+\newblock {\em IEEE Transactions on Computational Intelligence and AI in Games}, 4(1), 2012.
+
+\bibitem{perez2018rolling}
+Diego Perez-Liebana, Jialin Liu, Ahmed Khalifa, Raluca~D Gaina, Julian Togelius, and Simon~M Lucas.
+\newblock Rolling horizon evolutionary algorithms for general video game playing.
+\newblock {\em IEEE Transactions on Games}, 13(2):170--184, 2021.
+
+\bibitem{cowling2012information}
+Peter~I Cowling, Edward~J Powley, and Daniel Whitehouse.
+\newblock Information set {Monte Carlo} tree search.
+\newblock {\em IEEE Transactions on Computational Intelligence and AI in Games}, 4(2):120--143, 2012.
+
+\bibitem{soemers2021playouts}
+Dennis J. N.~J. Soemers, Eric Piette, Matthew Stephenson, and Cameron Browne.
+\newblock Optimised playout implementations for the ludii general game system.
+\newblock In {\em Advances in Computer Games (ACG)}, 2021.
+
+\bibitem{piette2021ludii_logic}
+Eric Piette, Cameron Browne, and Dennis J. N.~J. Soemers.
+\newblock Ludii game logic guide, 2021.
+
+\bibitem{finnsson2009cadiaplayer}
+Hilmar Finnsson and Yngvi Bj{\"o}rnsson.
+\newblock Cadia player: A simulation-based general game player.
+\newblock {\em IEEE Transactions on Computational Intelligence and AI in Games}, 1(1):4--15, 2009.
+
+\bibitem{koriche2017symmetry}
+Fr{\'e}d{\'e}ric Koriche, Sylvain Lagrue, {\'E}ric Piette, and S{\'e}bastien Tabary.
+\newblock Constraint-based symmetry detection in general game playing.
+\newblock In {\em Proceedings of the 26th International Joint Conference on Artificial Intelligence (IJCAI)}, pages 280--287, 2017.
+
+\bibitem{koriche2017woodstock}
+Fr{\'e}d{\'e}ric Koriche, Sylvain Lagrue, {\'E}ric Piette, and S{\'e}bastien Tabary.
+\newblock Woodstock : un programme-joueur g{\'e}n{\'e}rique dirig{\'e} par les contraintes stochastiques.
+\newblock {\em Revue d'intelligence artificielle}, 31(3):307--336, 2017.
+
+\bibitem{bowling2015heads}
+Michael Bowling, Neil Burch, Michael Johanson, and Oskari Tammelin.
+\newblock Heads-up limit hold’em poker is solved.
+\newblock {\em Science}, 347(6218):145--149, 2015.
+
+\bibitem{goadrich2026valet}
+Mark Goadrich, Achille Morenville, and Eric Piette.
+\newblock Valet: A standardized testbed of traditional imperfect-information card games.
+\newblock In {\em Computer and Games (CG)}, 2026.
+\newblock Accepted.
+
+\bibitem{Osborne1994}
+Martin~J. Osborne and Ariel Rubinstein.
+\newblock {\em A course in game theory}.
+\newblock The MIT Press, Cambridge, USA, 1994.
+\newblock electronic edition.
+
+\bibitem{long2010understanding}
+Jeffrey Long, Nathan Sturtevant, Michael Buro, and Timothy Furtak.
+\newblock Understanding the success of perfect information monte carlo sampling in game tree search.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial Intelligence}, volume~24, pages 134--140, 2010.
+
+\bibitem{chaslot2008progressive}
+Guillaume Chaslot, Mark Winands, Jaap van~den Herik, Jos Uiterwijk, and Bruno Bouzy.
+\newblock Progressive strategies for {Monte-Carlo} tree search.
+\newblock In {\em New Mathematics and Natural Computation}, volume~4, pages 343--357, 2008.
+
+\bibitem{gaina2023design}
+Raluca~D Gaina, Alexander Dockhorn, Martin Balla, Ivan Bravi, Diego Perez-Liebana, Joshua Knowles, and Simon~M Lucas.
+\newblock Design and implementation of tag: A tabletop games framework.
+\newblock {\em IEEE Transactions on Games}, 16(1):67--80, 2023.
+
+\bibitem{browne2022dlpworkshop}
+Cameron Browne, Eric Piette, Walter Crist, Matthew Stephenson, and Dennis J. N.~J. Soemers.
+\newblock Report on the 2nd digital ludeme project workshop.
+\newblock {\em ICGA Journal}, 2022.
+
+\bibitem{piette2024gametable_kickoff}
+Eric Piette, Walter Crist, Dennis J. N.~J. Soemers, Lisa Rougetet, Summer Courts, Tim Penn, and Achille Morenville.
+\newblock Gametable cost action: kickoff report.
+\newblock {\em ICGA Journal}, 46:11--27, 2024.
+
+\bibitem{browne2023ludii}
+Cameron Browne, Eric Piette, Matthew Stephenson, and Dennis J. N.~J. Soemers.
+\newblock Ludii general game system for modeling, analyzing, and designing board games.
+\newblock In {\em Encyclopedia of Computer Graphics and Games}. Springer, Cham, 2023.
+
+\bibitem{piette2021concepts}
+Eric Piette, Matthew Stephenson, Dennis J. N.~J. Soemers, and Cameron Browne.
+\newblock General board game concepts.
+\newblock In {\em IEEE Conference on Games (CoG)}, 2021.
+
+\bibitem{rautureau2026gametable_opening}
+Alo{\"i}s Rautureau, Eric Piette, Tim Penn, Summer Courts, James Goodman, Walter Crist, and Dennis J. N.~J. Soemers.
+\newblock Game ai for cultural heritage: Outcomes from the gametable 3rd grant period opening meeting.
+\newblock {\em ICGA Journal}, 2026.
+\newblock Accepted.
+
+\bibitem{todd2024gavel}
+Graham Todd, Alexander Padula, Matthew Stephenson, Eric Piette, Dennis J. N.~J. Soemers, and Julian Togelius.
+\newblock Gavel: Generating games via evolution and language models.
+\newblock In {\em Neural Information Processing Systems (NeurIPS)}, 2024.
+
+\bibitem{piette2019ludii_rbg}
+Eric Piette, Matthew Stephenson, Dennis J. N.~J. Soemers, and Cameron Browne.
+\newblock An empirical evaluation of two general game systems: Ludii and rbg.
+\newblock In {\em Proceedings of the IEEE Conference on Games (CoG)}, pages 626--629, 2019.
+
+\bibitem{morenville2024beliefsg}
+Achille Morenville and Eric Piette.
+\newblock Belief stochastic game: A model for imperfect-information games with known positions.
+\newblock In {\em Computer and Games (CG)}, 2024.
+
+\bibitem{morenville2025belief_constraints}
+Achille Morenville and Eric Piette.
+\newblock Modeling uncertainty: Constraint-based belief states in imperfect-information games.
+\newblock In {\em IEEE Conference on Games (CoG)}, 2025.
+
+\end{thebibliography}

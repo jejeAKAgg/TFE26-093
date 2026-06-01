@@ -1,0 +1,142 @@
+\relax 
+\providecommand\zref@newlabel[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Determinization in TAG Using Battleship}{19}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{BattleshipInTAG}{{3}{19}{Determinization in TAG Using Battleship}{chapter.3}{}}
+\newlabel{BattleshipInTAG@cref}{{[chapter][3][]3}{[1][19][]19}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Battleship as an Imperfect-Information Benchmark}{19}{section.3.1}\protected@file@percent }
+\newlabel{sec:battleship_benchmark}{{3.1}{19}{Battleship as an Imperfect-Information Benchmark}{section.3.1}{}}
+\newlabel{sec:battleship_benchmark@cref}{{[section][1][3]3.1}{[1][19][]19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Left: the physical Battleship board game. Right: the TAG graphical interface for the Battleship implementation developed in this thesis. The shot-tracking grid (right) records the acting player's observations; the ship grid (left) contains the true hidden fleet, masked from the opponent during play.}}{20}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:real_battleship_and_TAG_battleship}{{3.1}{20}{Left: the physical Battleship board game. Right: the TAG graphical interface for the Battleship implementation developed in this thesis. The shot-tracking grid (right) records the acting player's observations; the ship grid (left) contains the true hidden fleet, masked from the opponent during play}{figure.caption.7}{}}
+\newlabel{fig:real_battleship_and_TAG_battleship@cref}{{[figure][1][3]3.1}{[1][20][]20}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Battleship Implementation in TAG}{20}{section.3.2}\protected@file@percent }
+\newlabel{sec:battleship_tag_impl}{{3.2}{20}{Battleship Implementation in TAG}{section.3.2}{}}
+\newlabel{sec:battleship_tag_impl@cref}{{[section][2][3]3.2}{[1][20][]20}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Constraint-Based Determinization}{21}{section.3.3}\protected@file@percent }
+\newlabel{sec:constraint_det}{{3.3}{21}{Constraint-Based Determinization}{section.3.3}{}}
+\newlabel{sec:constraint_det@cref}{{[section][3][3]3.3}{[1][21][]21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The constraint-based determinization pipeline. Accumulated hits and misses are used as spatial constraints to guide hypothesis generation. The engine produces a coherent hypothetical opponent grid that is injected into the simulation copy instead of the true hidden state.}}{21}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:det_pipeline}{{3.2}{21}{The constraint-based determinization pipeline. Accumulated hits and misses are used as spatial constraints to guide hypothesis generation. The engine produces a coherent hypothetical opponent grid that is injected into the simulation copy instead of the true hidden state}{figure.caption.8}{}}
+\newlabel{fig:det_pipeline@cref}{{[figure][2][3]3.2}{[1][21][]21}}
+\citation{morenville2024beliefsg,morenville2025belief_constraints}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of a constraint-based hypothetical configuration. Red cells are confirmed hits; grey cells are confirmed misses. The hypothesized fleet placement (blue) covers all hit cells and avoids all miss cells, representing one plausible world consistent with the agent's observations.}}{22}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:det_example}{{3.3}{22}{Example of a constraint-based hypothetical configuration. Red cells are confirmed hits; grey cells are confirmed misses. The hypothesized fleet placement (blue) covers all hit cells and avoids all miss cells, representing one plausible world consistent with the agent's observations}{figure.caption.9}{}}
+\newlabel{fig:det_example@cref}{{[figure][3][3]3.3}{[1][22][]22}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Determinization Strategies}{22}{section.3.4}\protected@file@percent }
+\newlabel{sec:det_strategies}{{3.4}{22}{Determinization Strategies}{section.3.4}{}}
+\newlabel{sec:det_strategies@cref}{{[section][4][3]3.4}{[1][22][]22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Random Determinization}{23}{subsection.3.4.1}\protected@file@percent }
+\newlabel{sec:random_det}{{3.4.1}{23}{Random Determinization}{subsection.3.4.1}{}}
+\newlabel{sec:random_det@cref}{{[subsection][1][3,4]3.4.1}{[1][23][]23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Constraint-Based Determinization}{23}{subsection.3.4.2}\protected@file@percent }
+\newlabel{sec:csp_det}{{3.4.2}{23}{Constraint-Based Determinization}{subsection.3.4.2}{}}
+\newlabel{sec:csp_det@cref}{{[subsection][2][3,4]3.4.2}{[1][23][]23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Heatmap-Guided Determinization}{23}{subsection.3.4.3}\protected@file@percent }
+\newlabel{sec:heatmap_det}{{3.4.3}{23}{Heatmap-Guided Determinization}{subsection.3.4.3}{}}
+\newlabel{sec:heatmap_det@cref}{{[subsection][3][3,4]3.4.3}{[1][23][]23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Example probabilistic heatmap produced by the Heatmap-Guided strategy after a partial game. Warmer colours indicate cells more frequently occupied across sampled constraint-consistent configurations. Probability concentrates near confirmed hit cells and along their plausible continuations.}}{24}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:heatmap_example}{{3.4}{24}{Example probabilistic heatmap produced by the Heatmap-Guided strategy after a partial game. Warmer colours indicate cells more frequently occupied across sampled constraint-consistent configurations. Probability concentrates near confirmed hit cells and along their plausible continuations}{figure.caption.10}{}}
+\newlabel{fig:heatmap_example@cref}{{[figure][4][3]3.4}{[1][23][]24}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Experimental Setup}{24}{section.3.5}\protected@file@percent }
+\newlabel{sec:exp_setup}{{3.5}{24}{Experimental Setup}{section.3.5}{}}
+\newlabel{sec:exp_setup@cref}{{[section][5][3]3.5}{[1][24][]24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Tournament Protocol}{24}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Evaluated Agents}{25}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Evaluation Metrics}{25}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Experimental Results}{26}{section.3.6}\protected@file@percent }
+\newlabel{sec:results}{{3.6}{26}{Experimental Results}{section.3.6}{}}
+\newlabel{sec:results@cref}{{[section][6][3]3.6}{[1][26][]26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Overall Agent Performance}{26}{subsection.3.6.1}\protected@file@percent }
+\newlabel{subsec:overall}{{3.6.1}{26}{Overall Agent Performance}{subsection.3.6.1}{}}
+\newlabel{subsec:overall@cref}{{[subsection][1][3,6]3.6.1}{[1][26][]26}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Average win rates by agent and determinization strategy (1000\,ms budget, rounded).}}{26}{table.caption.11}\protected@file@percent }
+\newlabel{tab:winrates}{{3.1}{26}{Average win rates by agent and determinization strategy (1000\,ms budget, rounded)}{table.caption.11}{}}
+\newlabel{tab:winrates@cref}{{[table][1][3]3.1}{[1][26][]26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Average win rates per agent under the three determinization strategies (1000\,ms budget).}}{27}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:winrate_barplot}{{3.5}{27}{Average win rates per agent under the three determinization strategies (1000\,ms budget)}{figure.caption.12}{}}
+\newlabel{fig:winrate_barplot@cref}{{[figure][5][3]3.5}{[1][26][]27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Head-to-head win rates under Constraint-Based (top) and Heatmap-Guided (bottom) Determinization (1000\,ms budget). OSLA and RMHC dominate every matchup against IS-MCTS and MAST under both strategies, and the pairwise patterns are indistinguishable, confirming that the heatmap provides no measurable advantage in head-to-head outcomes at this time budget.}}{28}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:heatmap_both}{{3.6}{28}{Head-to-head win rates under Constraint-Based (top) and Heatmap-Guided (bottom) Determinization (1000\,ms budget). OSLA and RMHC dominate every matchup against IS-MCTS and MAST under both strategies, and the pairwise patterns are indistinguishable, confirming that the heatmap provides no measurable advantage in head-to-head outcomes at this time budget}{figure.caption.13}{}}
+\newlabel{fig:heatmap_both@cref}{{[figure][6][3]3.6}{[1][28][]28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Impact of Computational Budget}{30}{subsection.3.6.2}\protected@file@percent }
+\newlabel{subsec:budget}{{3.6.2}{30}{Impact of Computational Budget}{subsection.3.6.2}{}}
+\newlabel{subsec:budget@cref}{{[subsection][2][3,6]3.6.2}{[1][30][]30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Win rate as a function of thinking-time budget for each agent under the three determinization strategies. Color identifies the agent; line style identifies the strategy. Under all strategies, no agent shows a meaningful performance change as the budget increases from 100\,ms to 5000\,ms.}}{30}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:winrate_vs_time}{{3.7}{30}{Win rate as a function of thinking-time budget for each agent under the three determinization strategies. Color identifies the agent; line style identifies the strategy. Under all strategies, no agent shows a meaningful performance change as the budget increases from 100\,ms to 5000\,ms}{figure.caption.14}{}}
+\newlabel{fig:winrate_vs_time@cref}{{[figure][7][3]3.7}{[1][30][]30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Game Outcome Analysis}{31}{subsection.3.6.3}\protected@file@percent }
+\newlabel{subsec:outcomes}{{3.6.3}{31}{Game Outcome Analysis}{subsection.3.6.3}{}}
+\newlabel{subsec:outcomes@cref}{{[subsection][3][3,6]3.6.3}{[1][31][]31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Distribution of the HP difference between winner and loser at the end of each game, shown for all three determinization strategies. Under Random Determinization, the majority of games end with a margin of 1 HP; under Constraint-Based and Heatmap-Guided Determinization, the distribution flattens toward larger margins (1000ms budget).}}{31}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:drama}{{3.8}{31}{Distribution of the HP difference between winner and loser at the end of each game, shown for all three determinization strategies. Under Random Determinization, the majority of games end with a margin of 1 HP; under Constraint-Based and Heatmap-Guided Determinization, the distribution flattens toward larger margins (1000ms budget)}{figure.caption.15}{}}
+\newlabel{fig:drama@cref}{{[figure][8][3]3.8}{[1][31][]31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Average copy latency (top) and total forward model calls per game (bottom) for Constraint-Based and Heatmap-Guided Determinization (10, 50, and 100 heatmap iterations). Despite a higher copy latency under Heatmap-Guided Determinization, the number of forward model calls remains comparable across all strategies.}}{32}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:copy_latency_and_fm_calls}{{3.9}{32}{Average copy latency (top) and total forward model calls per game (bottom) for Constraint-Based and Heatmap-Guided Determinization (10, 50, and 100 heatmap iterations). Despite a higher copy latency under Heatmap-Guided Determinization, the number of forward model calls remains comparable across all strategies}{figure.caption.16}{}}
+\newlabel{fig:copy_latency_and_fm_calls@cref}{{[figure][9][3]3.9}{[1][32][]32}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Discussion}{33}{section.3.7}\protected@file@percent }
+\newlabel{sec:tag_discussion}{{3.7}{33}{Discussion}{section.3.7}{}}
+\newlabel{sec:tag_discussion@cref}{{[section][7][3]3.7}{[1][32][]33}}
+\@setckpt{Sections/4_TAG/TAG}{
+\setcounter{page}{34}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{2}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{7}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{9}
+\setcounter{table}{1}
+\setcounter{AM@survey}{0}
+\setcounter{parentequation}{0}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{EM@itemctr}{0}
+\setcounter{EM@etaremunectr}{0}
+\setcounter{section@level}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{5}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{DefaultLines}{2}
+\setcounter{DefaultDepth}{0}
+\setcounter{L@lines}{0}
+\setcounter{L@depth}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{mdf@globalstyle@cnt}{0}
+\setcounter{mdfcountframes}{0}
+\setcounter{mdf@env@i}{0}
+\setcounter{mdf@env@ii}{0}
+\setcounter{mdf@zref@counter}{0}
+\setcounter{lstnumber}{2}
+\setcounter{KVtest}{0}
+\setcounter{subfigure}{0}
+\setcounter{subfigure@save}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{subtable@save}{0}
+\setcounter{lotdepth}{1}
+\setcounter{float@type}{16}
+\setcounter{algorithm}{0}
+\setcounter{ALG@line}{0}
+\setcounter{ALG@rem}{0}
+\setcounter{ALG@nested}{0}
+\setcounter{ALG@Lnr}{2}
+\setcounter{ALG@blocknr}{10}
+\setcounter{ALG@storecount}{0}
+\setcounter{ALG@tmpcounter}{0}
+\setcounter{su@anzahl}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{lstlisting}{0}
+}

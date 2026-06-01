@@ -1,0 +1,40 @@
+\chapter{Conclusion}
+\label{conclusion}
+
+This thesis investigated a fundamental limitation of the Ludii General 
+Game Playing system: simulation-based agents involuntarily access hidden 
+game-state information through unrestricted context copies, producing 
+artificially inflated performance figures in imperfect-information games. 
+This architectural problem renders experimental results uninterpretable 
+and undermines the reliability of AI benchmarking in any Ludii game 
+involving hidden information.
+
+Three contributions were developed to address this problem. First, a 
+controlled imperfect-information benchmark was established in the 
+Tabletop Games Framework using Battleship as a case study, demonstrating 
+that simulation consistency matters more than search depth in 
+hidden-position environments. Second, the information leakage problem 
+in Ludii was formally characterized and empirically confirmed, showing 
+that native simulation-based agents achieve near-perfect win rates 
+against non-simulating baselines purely through involuntary access to 
+privileged state information. Third, a generic determinization layer 
+was designed and implemented for Ludii, intercepting simulation-time 
+context copies and replacing hidden information with coherent hypotheses 
+derived from accumulated observations, with no modification to existing 
+agent logic and only a single backward-compatible extension to the engine.
+
+Experimental evaluation confirmed that the determinization layer 
+achieves its primary objective. The re-implementation of OSLA in Ludii 
+provided a direct empirical bridge between the two frameworks, with 
+OSLA+Det achieving 87.5\% under constraint-based determinization, 
+closely mirroring the 87\% observed in TAG under identical conditions.
+
+Several directions remain open for future work. Extending the 
+determinization engine to reconstruct piece identities would enable 
+its application to hidden-identity games such as Stratego. A more 
+rigorous cross-framework comparison would require porting additional 
+agents between TAG and Ludii under identical computational conditions. 
+Finally, replacing single-determinization search with richer belief-state 
+representations~\cite{morenville2025belief_constraints} could further 
+improve reasoning quality at the cost of additional computational 
+complexity.

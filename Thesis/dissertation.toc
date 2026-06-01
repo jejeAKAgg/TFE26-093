@@ -1,0 +1,101 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Acknowledgments}{vii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Context}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Architectural Challenges}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Objectives}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Thesis Structure}{4}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}General Game Playing (GGP)}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Information}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Perfect and Imperfect}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Different Types of Hidden information}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Information Sets}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Belief State and Determinization}{9}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Search Algorithms}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Random Agent}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}One-Step Look-Ahead (OSLA)}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Rolling Horizon Evolution (RMHC)}{10}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Monte Carlo Tree Search (MCTS)}{10}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Move-Average Sampling Technique (MAST)}{11}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Traditional Board Games \& Modern Board Games}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The Tabletop Games Framework (TAG)}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Overview of TAG}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Code-First Design}{12}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Architecture}{12}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Agent Interface and State Copying}{13}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Current Limitations}{14}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}The Ludii General Game Playing System}{14}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Overview of Ludii}{14}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Data-First Design}{15}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Architecture}{15}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Hidden Information Representation}{16}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Simulation and State Copying}{17}{subsection.2.6.5}%
+\contentsline {chapter}{\numberline {3}Determinization in TAG Using Battleship}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Battleship as an Imperfect-Information Benchmark}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Battleship Implementation in TAG}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Constraint-Based Determinization}{21}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Determinization Strategies}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Random Determinization}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Constraint-Based Determinization}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Heatmap-Guided Determinization}{23}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Experimental Setup}{24}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Tournament Protocol}{24}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Evaluated Agents}{25}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Evaluation Metrics}{25}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Experimental Results}{26}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Overall Agent Performance}{26}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Impact of Computational Budget}{30}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Game Outcome Analysis}{31}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Discussion}{33}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Hidden-Information Simulation in Ludii}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Battleship in Ludii}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Simulation-Time Context Copying}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The \textsc {copyContext()} Mechanism}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}The Information Leakage Problem}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Where the Problem Lives in the Architecture}{37}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Experimental Characterization of Information Leakage}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Expected Behavior Under Correct Hidden-Information Handling}{38}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Observed Results}{38}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Quantifying the Leakage Effect}{39}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Discussion}{39}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Consequences for AI Research in Ludii}{39}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Consequences for General Game Playing}{39}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Why the Problem is Architectural, Not Incidental}{40}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Summary}{40}{subsection.4.4.4}%
+\contentsline {chapter}{\numberline {5}A Determinization Layer for Ludii}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Design Principles and Overview}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Detecting Hidden Information}{42}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Reconstructing the Game History}{43}{section.5.3}%
+\contentsline {section}{\numberline {5.4}The Determinization Engine}{43}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Injecting the Hypothesis}{44}{section.5.5}%
+\contentsline {section}{\numberline {5.6}The DeterminizedAgent}{44}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Discussion and Limitations}{45}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Experimental Evaluation of the Determinization Layer}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experimental Setup}{47}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Tournament Protocol}{47}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Agents}{48}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Evaluation Metrics}{48}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Tournament 1: Validating the Information Leakage}{49}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Results}{49}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}The Role of Simulation Depth}{50}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Confirmation of the Problem}{51}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Tournament 2: Determinized Agents}{51}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Results}{51}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Relative Performance of Determinized Agents}{52}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Computational Overhead}{53}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Comparison with the TAG Reference Benchmark}{53}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Structural Differences Between the Two Settings}{53}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Pattern 1: Convergence to Chance Under No Determinization}{53}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Pattern 2: Recovery Under Constraint-Based Determinization}{54}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Pattern 3: The Role of the Random Agent as Invariant Anchor}{54}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Discussion and Limitations}{54}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}What the Results Establish}{54}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Limitations}{54}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Summary}{55}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {7}Conclusion}{57}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Battleships.lud}{59}{section.A.1}%
+\contentsline {chapter}{Bibliography}{65}{appendix*.24}%
+\contentsfinish 

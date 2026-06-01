@@ -1,0 +1,58 @@
+\chapter{Introduction}
+\label{introduction}
+
+\section{Context}
+Games have long served as a benchmark for \textbf{Artificial Intelligence research} because they provide well-defined rules, measurable outcomes, and controlled environments for experimentation\cite{yannakakis2025artificial}. Early successes in game AI focused primarily on \textbf{perfect-information games} such as \textbf{Chess}, \textbf{Checkers}, and \textbf{Go}, where every player has complete knowledge of the game state at all times\cite{Newborn2011Kasparov,schaeffer1996chinook,silver2016mastering}. Classical search techniques such as minimax, alpha-beta pruning, and more recently Monte Carlo Tree Search (MCTS), achieved remarkable performance in these settings, culminating in milestone systems such as \textbf{Deep Blue} against world chess champion Garry Kasparov in 1997\cite{Newborn2011Kasparov} and \textbf{AlphaGO} against the best human Go players in 2016\cite{silver2016mastering}.
+
+However, many popular tabletop games do not follow the perfect-information assumption. Historically, \textbf{hidden information} first appeared prominently in card games, where players possess private hands unknown to their opponents. Early examples include traditional trick-taking games and later games such as Poker\cite{ParlettPokerHistory}. Over time, \textbf{hidden information mechanics} also became common in board games. Military simulation games such as Kriegsspiel introduced \textbf{fog-of-war concepts} in the nineteenth century\cite{kirschenbaum2016}, while games such as L'Attaque, Stratego, and Battleship popularized hidden identities and hidden positions in modern board game design\cite{attaque_boardgame,stratego:boardgame,battleshipgame}. Contemporary tabletop games now frequently combine board mechanics, cards, stochastic events, and multiple layers of hidden information.
+
+This evolution fundamentally changes the nature of the AI problem. In \textbf{perfect-information games}, an agent reasons over a single fully observable game state. In \textbf{imperfect-information games}, the agent must instead reason under uncertainty, maintaining hypotheses about unknown parts of the game state and making decisions based on incomplete observations\cite{russell2020artificial, kaelbling1998planning}. This significantly increases the complexity of planning and simulation.
+
+Two frameworks are particularly relevant for studying this problem.
+
+The Tabletop Games Framework (TAG)\cite{gaina2020tag} is a \textbf{Java-Based research platform} specifically designed for AI benchmarking in modern board games, including games with \textbf{hidden information}. TAG gives developers explicit control over what information agents can observe during simulations, allowing agents to reason over plausible hypothetical worlds rather than the true hidden state.
+
+Ludii\cite{piette2020ludii}, in contrast, is a large-scale General Game System hosting more than one thousand games described in a \textbf{dedicated description language}\cite{browne2020ludii_language}. Its extensive game library\cite{crist2024ludii_database} makes it an attractive platform for modern game AI research\cite{stephenson2019competition}. However, despite supporting hidden information at the game-description level, Ludii does not provide a proper mechanism for restricting hidden information that should remain hidden when copying game states during search. 
+
+This thesis investigates this \textbf{architectural limitation} and studies how such hidden-information reasoning mechanisms inspired by TAG can be integrated into Ludii. \textbf{Battleship} was selected as the primary case study because it represents a simple but representative imperfect-information game: the opponent's ships are completely hidden, the rules are easy to formalize, and the game is computationally lightweight enough to support large-scale experiments while remaining representative of a broader class of hidden-position games.
+
+\section{Architectural Challenges}
+General Game Playing (GGP)\cite{Genesereth2005GeneralGP} systems are AI frameworks designed to support many different games through a common simulation and agent infrastructure, without requiring game-specific AI implementations. Reasoning under hidden information is not only a game-design challenge but also an architectural challenge for such systems. Most classical GGP frameworks were originally designed around \textbf{perfect-information assumptions}, where every simulation can safely operate on an exact copy of the current game state\cite{Love+al:2006}. In \textbf{imperfect-information games}, however, this assumption no longer holds: an agent should only reason from the information that is observable to the corresponding player.
+
+This creates a fundamental difficulty for simulation-based AI methods such as Monte Carlo Tree Search (MCTS)\cite{browne2012survey}, Rolling Horizon Evolution\cite{perez2018rolling}, or One-Step Look-Ahead\cite{gaina2020tag}. These algorithms repeatedly copy and simulate game states in order to evaluate future actions. In \textbf{perfect-information games}, unrestricted state copies are correct and desirable. In \textbf{imperfect-information games}, the copied state must instead preserve the uncertainty faced by the player. Hidden information should therefore be masked, randomized, or replaced with plausible hypotheses during simulations\cite{cowling2012information}.
+
+TAG was explicitly designed with this requirement in mind. Its architecture allows developers to control how game states are copied for each player, making it possible to generate player-specific observations and coherent determinizations during search. As a result, agents reason over hypothetical worlds that are consistent with their observations rather than over the true hidden state.
+
+Ludii follows a different architectural philosophy. While hidden information can be expressed correctly at the game-description level through the .lud language, the simulation infrastructure itself relies on unrestricted copies of the game context\cite{soemers2021playouts}. Consequently, agents performing simulations may access information that should remain hidden, such as the exact positions or identities of opponent pieces. This behavior is not intentional cheating by the agents, but rather a consequence of an architecture originally designed primarily for perfect-information reasoning.
+
+This limitation has important methodological consequences for AI research. If agents can unintentionally exploit privileged information during simulations, experimental results can no longer be interpreted as measurements of genuine reasoning under uncertainty. Comparisons between agents become biased, and the evaluation of imperfect-information algorithms becomes unreliable.
+
+Addressing this issue is particularly challenging in a General Game Playing setting. Unlike specialized game engines, GGP systems must support many different games without relying on game-specific implementations. Any solution must therefore remain generic, compatible with existing agents, and applicable across a large and heterogeneous game library.
+
+The central objective of this thesis is to address this architectural limitation in Ludii by introducing a determinization layer inspired by TAG’s hidden-information handling mechanisms. The proposed approach aims to preserve compatibility with existing Ludii agents while ensuring that simulations operate on coherent hypothetical game states rather than on privileged information.
+
+\section{Research Objectives}
+This thesis investigates how hidden-information reasoning can be integrated into a GGP framework originally designed around perfect-information assumptions. More specifically, the work studies how simulation-based AI agents can operate on coherent hypothetical game states rather than on privileged information during search.
+
+To address this problem, the thesis pursues three main objectives.
+
+\textbf{The first objective} is to establish a controlled imperfect-information benchmark in the Tabletop Games Framework (TAG) using Battleship as a case study. This benchmark serves as a reference environment for studying determinization strategies under hidden information. Three levels of determinization are developed and evaluated: BASIC, which relies on naive random determinization; SMART, which generates hypotheses consistent with previously observed hits and misses through a constraint-based approach; and SMART+HEATMAP, which extends SMART with a probabilistic heatmap used to bias action selection toward statistically likely ship positions. These implementations provide a controlled baseline for imperfect-information reasoning in TAG.
+
+\textbf{The second objective} is to formally characterize the hidden-information simulation problem in Ludii. This involves analyzing the architectural differences between TAG and Ludii, studying how game-state copies are generated during simulations, and demonstrating that native simulation-based Ludii agents may unintentionally access privileged hidden information during search. The impact of this behavior is then evaluated experimentally through controlled tournaments in Battleship.
+
+\textbf{The third and central objective} is to design and implement a generic determinization layer for Ludii inspired by TAG’s hidden-information handling mechanisms. The proposed solution intercepts simulation copies, replaces hidden information with coherent hypotheses generated from past observations, and integrates transparently with existing simulation-based Ludii agents without requiring modifications to their internal decision logic\cite{piette2021ludii_logic}. The approach is evaluated experimentally and compared against the TAG reference benchmark in order to assess both its effectiveness and its limitations.
+ 
+\section{Thesis Structure}
+The remainder of this thesis is organized as follows:
+
+\textbf{Chapter 2} introduces the theoretical and technical background required for the study. It presents the main concepts related to imperfect-information games, determinization techniques, simulation-based AI methods, and General Game Playing frameworks. The architectures and hidden-information mechanisms of both TAG and Ludii are also discussed.
+
+\textbf{Chapter 3} develops the reference benchmark used throughout the thesis. Battleship is implemented in TAG, and several determinization strategies are designed and evaluated in order to study the impact of hidden-information handling on agent performance.
+
+\textbf{Chapter 4} analyzes the hidden-information simulation problem in Ludii. The chapter studies how state copies are generated during simulations and demonstrates how unrestricted copies may expose privileged information to agents during search.
+
+\textbf{Chapter 5} presents the proposed determinization layer for Ludii. The architecture of the solution is described in detail, including hidden-information detection, game-state reconstruction, hypothesis generation, and integration with existing simulation-based agents.
+
+\textbf{Chapter 6} evaluates the proposed approach experimentally through a series of controlled tournaments in Ludii and compares the results against the TAG reference benchmark.
+
+Finally, \textbf{Chapter 7} summarizes the main contributions of the thesis, discusses the limitations of the proposed approach, and outlines several directions for future work.

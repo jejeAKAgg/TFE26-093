@@ -1,0 +1,77 @@
+\documentclass{dissertation}
+%\documentclass[print]{dissertation}
+%\documentclass[print,draft]{dissertation}
+
+\hyphenation{TestRoots WatchDog proj-ect proj-ects Ec-lipse two-fold clie-nts Mo-cki-to wide-spread}
+\newcommand{\sparkline}[1]{$\vcenter{\hbox{\includegraphics[scale=0.04]{#1}}}$}
+
+%\makeglossaries
+
+\newcommand*{\origrightarrow}{}
+\let\oldarrow\textrightarrow
+\renewcommand*{\textrightarrow}{\fontfamily{cmr}\selectfont\origrightarrow}
+\loadglsentries[main]{glossary}
+
+\input{abbreviations}
+
+\begin{document}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+%%\include{title/title}
+\includepdf[pages=1]{front_back/TFE26-093_EPL-master-thesis-cover.pdf}
+
+%% The (optional) dedication can be used to thank someone or display a
+%% significant quotation.
+\dedication{\epigraph{Our greatest glory is not in never falling, 
+    but in rising every time we fall.
+  }{Nelson Mandela}}
+
+\tableofcontents
+
+%\include{Sections/summary/summary}
+\include{Sections/1_acks/acks}
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+%% Turn on thumb indices.
+\thumbtrue
+
+\include{Sections/2_Introduction/introduction}
+\include{Sections/3_Background/background}
+\include{Sections/4_TAG/TAG}
+\include{Sections/5_Ludii/Ludii}
+\include{Sections/6_Solution/solution}
+\include{Sections/7_Results/results}
+\include{Sections/8_Conclusion/conclusion}
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+
+\include{Sections/9_Appendix/appendix}
+
+%% Turn off thumb indices for unnumbered chapters.
+\thumbfalse
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+\setheader{Bibliography}
+
+\bibliographystyle{unsrt}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{dissertation}
+
+%\chapter*{Glossary}
+
+%\glsaddall
+%\printglossary[type=\acronymtype,title={Glossary}]
+%\addcontentsline{toc}{chapter}{Glossary}
+%\setheader{Glossary}
+
+\includepdf[pages=2]{front_back/TFE26-093_EPL-master-thesis-cover.pdf}
+
+\end{document}
+
