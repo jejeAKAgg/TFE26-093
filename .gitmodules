@@ -1,0 +1,8 @@
+[submodule "TAG"]
+	path = TAG
+	url = https://github.com/jejeAKAgg/TAG.git
+	branch = TFE26-093
+[submodule "Ludii"]
+	path = Ludii
+	url = https://github.com/jejeAKAgg/Ludii.git
+	branch = TFE26-093

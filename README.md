@@ -38,7 +38,6 @@ TFE26-093/
 │     ├── scripts        # The SCRUM scripts made for the CECI clusters
 │     ├── ...            # (Python scripts)
 │     └── setupANDrun.sh # The script to setup the venv and plotting
-│ ├── base_r1.nft
 │ └── AI
 │     └── src
 │         └── utils
