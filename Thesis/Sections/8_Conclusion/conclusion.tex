@@ -1,40 +1,81 @@
 \chapter{Conclusion}
 \label{conclusion}
 
-This thesis investigated a fundamental limitation of the Ludii General 
-Game Playing system: simulation-based agents involuntarily access hidden 
-game-state information through unrestricted context copies, producing 
-artificially inflated performance figures in imperfect-information games. 
-This architectural problem renders experimental results uninterpretable 
-and undermines the reliability of AI benchmarking in any Ludii game 
-involving hidden information.
+This thesis investigated a fundamental limitation of the Ludii General Game 
+Playing system: simulation-based agents involuntarily access hidden game-state 
+information through unrestricted context copies, producing artificially 
+inflated performance figures in imperfect-information games. This architectural 
+problem renders experimental results uninterpretable and undermines the 
+reliability of AI benchmarking in any Ludii game involving hidden information.
 
-Three contributions were developed to address this problem. First, a 
-controlled imperfect-information benchmark was established in the 
-Tabletop Games Framework using Battleship as a case study, demonstrating 
-that simulation consistency matters more than search depth in 
-hidden-position environments. Second, the information leakage problem 
-in Ludii was formally characterized and empirically confirmed, showing 
-that native simulation-based agents achieve near-perfect win rates 
-against non-simulating baselines purely through involuntary access to 
-privileged state information. Third, a generic determinization layer 
-was designed and implemented for Ludii, intercepting simulation-time 
-context copies and replacing hidden information with coherent hypotheses 
-derived from accumulated observations, with no modification to existing 
-agent logic and only a single backward-compatible extension to the engine.
+Three contributions were developed to address this problem. First, a controlled 
+imperfect-information benchmark was established in the Tabletop Games Framework 
+using Battleship as a case study, demonstrating that simulation consistency 
+matters more than search depth in hidden-position environments. Second, the 
+information leakage problem in Ludii was formally characterized and empirically 
+confirmed, showing that native simulation-based agents achieve near-perfect win 
+rates against non-simulating baselines purely through involuntary access to 
+privileged state information. Third, a generic determinization layer was 
+designed and implemented for Ludii, intercepting simulation-time context copies 
+and replacing hidden information with coherent hypotheses derived from 
+accumulated observations, with no modification to existing agent logic and only 
+a single backward-compatible extension to the engine.
 
-Experimental evaluation confirmed that the determinization layer 
-achieves its primary objective. The re-implementation of OSLA in Ludii 
-provided a direct empirical bridge between the two frameworks, with 
-OSLA+Det achieving 87.5\% under constraint-based determinization, 
-closely mirroring the 87\% observed in TAG under identical conditions.
+Experimental evaluation confirmed that the determinization layer achieves its 
+primary objective. The re-implementation of OSLA in Ludii provided a direct 
+empirical bridge between the two frameworks, with OSLA+Det achieving 87.5\% 
+under constraint-based determinization, closely mirroring the 87\% observed 
+in TAG under identical conditions.
 
-Several directions remain open for future work. Extending the 
-determinization engine to reconstruct piece identities would enable 
-its application to hidden-identity games such as Stratego. A more 
-rigorous cross-framework comparison would require porting additional 
-agents between TAG and Ludii under identical computational conditions. 
-Finally, replacing single-determinization search with richer belief-state 
-representations~\cite{morenville2025belief_constraints} could further 
-improve reasoning quality at the cost of additional computational 
-complexity.
+\newpage
+
+\section*{Future Work}
+
+Several directions remain open for future work.
+
+\paragraph{Hidden-identity games.}
+The current determinization engine handles only the \texttt{who} chunk field, 
+addressing hidden-position games such as Battleship. Extending it to also 
+reconstruct \texttt{what} field values would enable its application to 
+hidden-identity games such as Stratego, where piece locations are visible but 
+ranks are concealed. This extension is conceptually straightforward but 
+requires reasoning over type constraints rather than purely positional ones.
+
+\paragraph{Richer uncertainty representations.}
+The single-determinization approach adopted here inherits known limitations of 
+determinization-based search. Replacing it with richer belief-state 
+representations~\cite{morenville2025belief_constraints,morenville2024beliefsg} could 
+improve reasoning quality under uncertainty at the cost of additional 
+computational complexity. Investigating this tradeoff in the GGP setting, 
+where agents must remain game-independent, constitutes a natural extension 
+of this work.
+
+\paragraph{Cross-framework comparison.}
+The comparison between TAG and Ludii is currently strengthened by the 
+re-implementation of OSLA+Det as a shared agent, but remains limited by the 
+absence of RMHC and by differences in the internal implementations of UCT and 
+MAST between the two frameworks. A more rigorous comparison would require 
+either porting TAG agents to Ludii or re-implementing Ludii agents in TAG under 
+identical computational conditions.
+
+\paragraph{Porting RMHC to Ludii.}
+RMHC was not ported to Ludii in this work and therefore remains absent from 
+the Ludii experimental evaluation. Given its strong performance under 
+constraint-based determinization in TAG, porting it would provide an 
+additional data point for the cross-framework comparison and could further 
+validate the generality of the determinization layer.
+
+\paragraph{Incremental history reconstruction.}
+The current history reconstruction mechanism replays the full move history 
+from the Trial at each decision step, introducing an overhead that grows 
+linearly with game length. Maintaining an incremental observation log updated 
+after each move would substantially reduce this cost and constitutes a natural 
+direction for optimization.
+
+\paragraph{Games with complex observation structures.}
+The history reconstruction currently assumes that all relevant observations 
+can be inferred from the move sequence alone, which holds for Battleship but 
+may not generalize to games with simultaneous moves, hidden draws, or 
+probabilistic events. Extending the reconstruction mechanism to handle such 
+structures would broaden the applicability of the determinization layer across 
+the full Ludii game library.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.15)  1 JUN 2026 05:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.15)  1 JUN 2026 09:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1671,14 +1671,14 @@ Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page
 
  <./front_back/TFE26-093_EPL-master-thesis-cover.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 30.
+(Font)              scaled to size 10.0pt on input line 29.
  [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.0pt on input line 32.
+(Font)              scaled to size 10.0pt on input line 31.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
-(Font)              scaled to size 10.0pt on input line 32.
+(Font)              scaled to size 10.0pt on input line 31.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
-(Font)              scaled to size 24.88pt on input line 32.
+(Font)              scaled to size 24.88pt on input line 31.
  (./dissertation.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.0pt on input line 2.
@@ -1892,7 +1892,7 @@ File: figs/battleship.png Graphic file (type png)
 Package pdftex.def Info: figs/battleship.png  used on input line 79.
 (pdftex.def)             Requested size: 130.5791pt x 130.561pt.
  [7 <./figs/stratego.png (PNG copy)> <./figs/battleship.png (PNG copy)>]
-<figs/background/poker.png, id=482, 1180.41pt x 500.62032pt>
+<figs/background/poker.png, id=481, 1180.41pt x 500.62032pt>
 File: figs/background/poker.png Graphic file (type png)
 <use figs/background/poker.png>
 Package pdftex.def Info: figs/background/poker.png  used on input line 99.
@@ -1916,7 +1916,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [12{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
 (Font)              scaled to size 10.0pt on input line 198.
-<figs/background/MVC.png, id=528, 1192.455pt x 465.99094pt>
+<figs/background/MVC.png, id=527, 1192.455pt x 465.99094pt>
 File: figs/background/MVC.png Graphic file (type png)
 <use figs/background/MVC.png>
 Package pdftex.def Info: figs/background/MVC.png  used on input line 209.
@@ -1935,7 +1935,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.0pt on input line 224.
  [13{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc} <./figs/background/MVC.png (PNG copy)>] [14]
-<figs/background/ludiiARCH.png, id=565, 1187.18532pt x 473.51906pt>
+<figs/background/ludiiARCH.png, id=564, 1187.18532pt x 473.51906pt>
 File: figs/background/ludiiARCH.png Graphic file (type png)
 <use figs/background/ludiiARCH.png>
 Package pdftex.def Info: figs/background/ludiiARCH.png  used on input line 280.
@@ -1961,30 +1961,30 @@ Overfull \hbox (4.50761pt too wide) in paragraph at lines 19--20
  []
 
 [19]
-<figs/background/battleshipREAL.png, id=596, 260.47313pt x 260.47313pt>
+<figs/background/battleshipREAL.png, id=595, 260.47313pt x 260.47313pt>
 File: figs/background/battleshipREAL.png Graphic file (type png)
 <use figs/background/battleshipREAL.png>
 Package pdftex.def Info: figs/background/battleshipREAL.png  used on input line 31.
 (pdftex.def)             Requested size: 114.25578pt x 114.25479pt.
-<figs/background/battleshipTAG.png, id=597, 1061.9675pt x 545.03625pt>
+<figs/background/battleshipTAG.png, id=596, 1061.9675pt x 545.03625pt>
 File: figs/background/battleshipTAG.png Graphic file (type png)
 <use figs/background/battleshipTAG.png>
 Package pdftex.def Info: figs/background/battleshipTAG.png  used on input line 37.
 (pdftex.def)             Requested size: 163.22327pt x 83.76451pt.
  [20 <./figs/background/battleshipREAL.png (PNG copy)> <./figs/background/battleshipTAG.png>]
-<figs/background/det_pipeline.png, id=607, 1180.41pt x 323.70938pt>
+<figs/background/det_pipeline.png, id=606, 1180.41pt x 323.70938pt>
 File: figs/background/det_pipeline.png Graphic file (type png)
 <use figs/background/det_pipeline.png>
 Package pdftex.def Info: figs/background/det_pipeline.png  used on input line 72.
 (pdftex.def)             Requested size: 362.72084pt x 99.46965pt.
  [21 <./figs/background/det_pipeline.png (PNG copy)>]
-<figs/background/det_example.png, id=614, 656.4525pt x 493.845pt>
+<figs/background/det_example.png, id=613, 656.4525pt x 493.845pt>
 File: figs/background/det_example.png Graphic file (type png)
 <use figs/background/det_example.png>
 Package pdftex.def Info: figs/background/det_example.png  used on input line 87.
 (pdftex.def)             Requested size: 235.76633pt x 177.36208pt.
  [22 <./figs/background/det_example.png (PNG copy)>]
-<figs/background/heatmap_example.png, id=624, 727.96968pt x 493.845pt>
+<figs/background/heatmap_example.png, id=623, 727.96968pt x 493.845pt>
 File: figs/background/heatmap_example.png Graphic file (type png)
 <use figs/background/heatmap_example.png>
 Package pdftex.def Info: figs/background/heatmap_example.png  used on input line 127.
@@ -1993,47 +1993,47 @@ Package pdftex.def Info: figs/background/heatmap_example.png  used on input line
 Underfull \vbox (badness 5274) has occurred while \output is active []
 
  [24 <./figs/background/heatmap_example.png (PNG copy)>] [25]
-<Sections/4_TAG/figs/winrate_barplot.pdf, id=644, 642.94519pt x 353.96303pt>
+<Sections/4_TAG/figs/winrate_barplot.pdf, id=643, 642.94519pt x 353.96303pt>
 File: Sections/4_TAG/figs/winrate_barplot.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/winrate_barplot.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/winrate_barplot.pdf  used on input line 238.
+Package pdftex.def Info: Sections/4_TAG/figs/winrate_barplot.pdf  used on input line 236.
 (pdftex.def)             Requested size: 362.72084pt x 199.68701pt.
  [26{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertinust1math/libusMR.enc}] [27 <./Sections/4_TAG/figs/winrate_barplot.pdf>]
-<Sections/4_TAG/figs/heatmap_constraintbased_det.pdf, id=706, 483.8081pt x 352.86392pt>
+<Sections/4_TAG/figs/heatmap_constraintbased_det.pdf, id=705, 483.8081pt x 352.86392pt>
 File: Sections/4_TAG/figs/heatmap_constraintbased_det.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/heatmap_constraintbased_det.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/heatmap_constraintbased_det.pdf  used on input line 264.
+Package pdftex.def Info: Sections/4_TAG/figs/heatmap_constraintbased_det.pdf  used on input line 262.
 (pdftex.def)             Requested size: 362.72084pt x 264.56113pt.
-<Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf, id=707, 483.8081pt x 352.86392pt>
+<Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf, id=706, 483.8081pt x 352.86392pt>
 File: Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf  used on input line 268.
+Package pdftex.def Info: Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf  used on input line 266.
 (pdftex.def)             Requested size: 362.72084pt x 264.56113pt.
 
 Overfull \vbox (44.63089pt too high) has occurred while \output is active []
 
  [28 <./Sections/4_TAG/figs/heatmap_constraintbased_det.pdf> <./Sections/4_TAG/figs/heatmap_heatmapguided_det.pdf>] [29]
-<Sections/4_TAG/figs/winrate_vs_time.pdf, id=822, 564.86908pt x 761.35693pt>
+<Sections/4_TAG/figs/winrate_vs_time.pdf, id=821, 564.86908pt x 761.35693pt>
 File: Sections/4_TAG/figs/winrate_vs_time.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/winrate_vs_time.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/winrate_vs_time.pdf  used on input line 317.
+Package pdftex.def Info: Sections/4_TAG/figs/winrate_vs_time.pdf  used on input line 315.
 (pdftex.def)             Requested size: 326.44653pt x 440.00737pt.
  [30 <./Sections/4_TAG/figs/winrate_vs_time.pdf>]
-<Sections/4_TAG/figs/drama_distribution.pdf, id=931, 643.08633pt x 353.3476pt>
+<Sections/4_TAG/figs/drama_distribution.pdf, id=930, 643.08633pt x 353.3476pt>
 File: Sections/4_TAG/figs/drama_distribution.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/drama_distribution.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/drama_distribution.pdf  used on input line 352.
+Package pdftex.def Info: Sections/4_TAG/figs/drama_distribution.pdf  used on input line 346.
 (pdftex.def)             Requested size: 362.72084pt x 199.30208pt.
  [31 <./Sections/4_TAG/figs/drama_distribution.pdf>]
-<Sections/4_TAG/figs/copy_latency.pdf, id=988, 787.6715pt x 351.22305pt>
+<Sections/4_TAG/figs/copy_latency.pdf, id=987, 787.6715pt x 351.22305pt>
 File: Sections/4_TAG/figs/copy_latency.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/copy_latency.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/copy_latency.pdf  used on input line 384.
+Package pdftex.def Info: Sections/4_TAG/figs/copy_latency.pdf  used on input line 378.
 (pdftex.def)             Requested size: 362.72084pt x 161.73605pt.
-<Sections/4_TAG/figs/fm_calls.pdf, id=989, 787.73111pt x 351.22305pt>
+<Sections/4_TAG/figs/fm_calls.pdf, id=988, 787.73111pt x 351.22305pt>
 File: Sections/4_TAG/figs/fm_calls.pdf Graphic file (type pdf)
 <use Sections/4_TAG/figs/fm_calls.pdf>
-Package pdftex.def Info: Sections/4_TAG/figs/fm_calls.pdf  used on input line 388.
+Package pdftex.def Info: Sections/4_TAG/figs/fm_calls.pdf  used on input line 382.
 (pdftex.def)             Requested size: 362.72084pt x 161.72533pt.
  [32 <./Sections/4_TAG/figs/copy_latency.pdf> <./Sections/4_TAG/figs/fm_calls.pdf>]) [33]
 \openout2 = `Sections/5_Ludii/Ludii.aux'.
@@ -2058,7 +2058,7 @@ Overfull \hbox (3.80873pt too wide) in paragraph at lines 62--74
  []
 
 [37]
-<Sections/5_Ludii/figs/winrate_vs_random_t1.pdf, id=1123, 570.8615pt x 352.75478pt>
+<Sections/5_Ludii/figs/winrate_vs_random_t1.pdf, id=1122, 570.8615pt x 352.75478pt>
 File: Sections/5_Ludii/figs/winrate_vs_random_t1.pdf Graphic file (type pdf)
 <use Sections/5_Ludii/figs/winrate_vs_random_t1.pdf>
 Package pdftex.def Info: Sections/5_Ludii/figs/winrate_vs_random_t1.pdf  used on input line 107.
@@ -2076,13 +2076,13 @@ Chapter 5.
 
 
 ] [42] [43] [44]
-<figs/background/determinization_pipeline.png, id=1209, 1180.41pt x 432.11438pt>
+<figs/background/determinization_pipeline.png, id=1208, 1180.41pt x 432.11438pt>
 File: figs/background/determinization_pipeline.png Graphic file (type png)
 <use figs/background/determinization_pipeline.png>
-Package pdftex.def Info: figs/background/determinization_pipeline.png  used on input line 105.
+Package pdftex.def Info: figs/background/determinization_pipeline.png  used on input line 103.
 (pdftex.def)             Requested size: 362.72084pt x 132.78041pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 107.
+(Font)              scaled to size 8.0pt on input line 105.
  [45 <./figs/background/determinization_pipeline.png (PNG copy)>]) [46]
 \openout2 = `Sections/7_Results/results.aux'.
 
@@ -2094,64 +2094,69 @@ Chapter 6.
 
 
 ] [48]
-<Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf, id=1241, 570.8615pt x 352.75478pt>
+<Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf, id=1240, 570.8615pt x 352.75478pt>
 File: Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf Graphic file (type pdf)
 <use Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf>
-Package pdftex.def Info: Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf  used on input line 83.
+Package pdftex.def Info: Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf  used on input line 81.
 (pdftex.def)             Requested size: 362.72084pt x 224.14212pt.
  [49 <./Sections/7_Results/figs/winrate_tournament_1_native_agents.pdf>]
-<Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf, id=1290, 483.8081pt x 352.86392pt>
+<Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf, id=1287, 483.8081pt x 352.86392pt>
 File: Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf Graphic file (type pdf)
 <use Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf>
-Package pdftex.def Info: Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf  used on input line 114.
+Package pdftex.def Info: Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf  used on input line 108.
 (pdftex.def)             Requested size: 362.72084pt x 264.56113pt.
  [50 <./Sections/7_Results/figs/heatmap_tournament_1_native_agents.pdf>]
-<Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf, id=1345, 570.8615pt x 352.75478pt>
+<Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf, id=1342, 570.8615pt x 352.75478pt>
 File: Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf Graphic file (type pdf)
 <use Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf>
-Package pdftex.def Info: Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf  used on input line 169.
+Package pdftex.def Info: Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf  used on input line 156.
 (pdftex.def)             Requested size: 362.72084pt x 224.14212pt.
-<Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf, id=1346, 483.8081pt x 352.86392pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51 <./Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf>]
+<Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf, id=1394, 483.8081pt x 352.86392pt>
 File: Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf Graphic file (type pdf)
 <use Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf>
-Package pdftex.def Info: Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf  used on input line 199.
+Package pdftex.def Info: Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf  used on input line 176.
 (pdftex.def)             Requested size: 362.72084pt x 264.56113pt.
- [51 <./Sections/7_Results/figs/winrate_tournament_2_determinized_agents.pdf>] [52 <./Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf>] [53] [54{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertinust1math/libusMI.enc}]
-Overfull \hbox (59.42378pt too wide) in paragraph at lines 297--306
-[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Additionally, the his-tory re-con-struc-tion mech-a-nism in \T1/LinuxLibertineMonoT-TLF/regular/n/10 BattleshipDeterminizationAgent
- []
 
+Underfull \vbox (badness 1199) has occurred while \output is active []
 
-Overfull \hbox (3.56151pt too wide) in paragraph at lines 307--311
+ [52 <./Sections/7_Results/figs/heatmap_tournament_2_determinized_agents.pdf>] [53] [54{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertinust1math/libusMI.enc}]
+Overfull \hbox (3.56151pt too wide) in paragraph at lines 296--300
 []\T1/LinuxLibertineT-TLF/m/n/10 (-20) Finally, the com-par-i-son with TAG is strength-ened by the re-implementation of OSLA+Det
  []
 
-) [55]
+)
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [55] [56]
 \openout2 = `Sections/8_Conclusion/conclusion.aux'.
 
- (./Sections/8_Conclusion/conclusion.tex [56
-
-
-
-
-]
+ (./Sections/8_Conclusion/conclusion.tex
 Chapter 7.
 
-Overfull \hbox (2.45639pt too wide) in paragraph at lines 12--25
+Overfull \hbox (2.45639pt too wide) in paragraph at lines 11--23
 []\T1/LinuxLibertineT-TLF/m/n/10 (-20) Three con-tri-bu-tions were de-vel-oped to ad-dress this prob-lem. First, a con-trolled imperfect-
  []
 
-) [57]
+[57
+
+
+
+
+]) [58]
 \openout2 = `Sections/9_Appendix/appendix.aux'.
 
- (./Sections/9_Appendix/appendix.tex [58
+ (./Sections/9_Appendix/appendix.tex
+Appendix A.
+(./Sections/9_Appendix/Battleships.lud [59
 
 
 
 
 ]
-Appendix A.
-(./Sections/9_Appendix/Battleships.lud [59]
 Overfull \hbox (44.31877pt too wide) in paragraph at lines 80--82
 [][][][][] 
  []
@@ -2177,33 +2182,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] (./dissertation.bbl [65] [66] [67])
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf  used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf  used on input line 73.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf  used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf  used on input line 73.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<front_back/TFE26-093_EPL-master-thesis-cover.pdf, id=1716, page=2, 597.50829pt x 845.0471pt>
+<front_back/TFE26-093_EPL-master-thesis-cover.pdf, id=1714, page=2, 597.50829pt x 845.0471pt>
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf, page 2>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 73.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf, page 2>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 73.
 (pdftex.def)             Requested size: 482.85764pt x 682.8984pt.
  [68]
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf, page 2>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 73.
 (pdftex.def)             Requested size: 482.85764pt x 682.8984pt.
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf, page 2>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 73.
 (pdftex.def)             Requested size: 482.85764pt x 682.8984pt.
 File: front_back/TFE26-093_EPL-master-thesis-cover.pdf Graphic file (type pdf)
 <use front_back/TFE26-093_EPL-master-thesis-cover.pdf, page 2>
-Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 74.
+Package pdftex.def Info: front_back/TFE26-093_EPL-master-thesis-cover.pdf , page2 used on input line 73.
 (pdftex.def)             Requested size: 482.85764pt x 682.8984pt.
  [69
 
@@ -2214,13 +2219,13 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 48776 strings out of 474222
- 900743 string characters out of 5748733
+ 48782 strings out of 474222
+ 900950 string characters out of 5748733
  2623975 words of memory out of 5000000
- 69029 multiletter control sequences out of 15000+600000
- 769670 words of font info for 541 fonts, out of 8000000 for 9000
+ 69032 multiletter control sequences out of 15000+600000
+ 770042 words of font info for 544 fonts, out of 8000000 for 9000
  1148 hyphenation exceptions out of 8191
- 109i,19n,107p,2368b,2568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,19n,107p,2368b,2566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{https://github.com/jejeAKAgg/TFE26-093} has been referenced but does not exist, replaced by a fixed one
 
@@ -2234,10 +2239,10 @@ pdfTeX warning (dest): name{https://www.tabletoprnd.co.uk/} has been referenced 
 pdfTeX warning (dest): name{http://ggp.stanford.edu/} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/libertinust1math/LibertinusT1Math.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTBI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on dissertation.pdf (77 pages, 4474935 bytes).
+Output written on dissertation.pdf (77 pages, 4466824 bytes).
 PDF statistics:
- 1891 PDF objects out of 2073 (max. 8388607)
+ 1889 PDF objects out of 2073 (max. 8388607)
  1076 compressed objects within 11 object streams
- 438 named destinations out of 1000 (max. 500000)
+ 437 named destinations out of 1000 (max. 500000)
  105133 words of extra memory for PDF output out of 106986 (max. 10000000)
 

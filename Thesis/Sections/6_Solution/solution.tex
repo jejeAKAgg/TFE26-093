@@ -52,8 +52,6 @@ The \textbf{ContextDeterminiser} iterates over the move history stored in the \t
 
 The reconstruction is performed fresh at each copy call rather than maintained incrementally. This is intentional: it avoids any need to track state between calls and ensures that the maps always reflect the complete history available in the \textsc{Trial} at the time of the simulation. The computational overhead is proportional to the number of moves played, which in Battleship is at most 100 per player and therefore negligible relative to the cost of hypothesis generation itself.
 
-One subtlety arises with the sinking of ships. In standard Battleship, when a ship is completely sunk, the opponent is informed of both the sink event and the ship's size. This information further constrains the set of valid configurations: the \textbf{ContextDeterminiser} incorporates sink events from the history to mark entire ship footprints as confirmed occupied, reducing the search space for subsequent hypothesis generation.
-
 
 %%% 5.4 %%%
 \section{The Determinization Engine}

@@ -12,44 +12,47 @@ A level-1 auxiliary file: Sections/8_Conclusion/conclusion.aux
 A level-1 auxiliary file: Sections/9_Appendix/appendix.aux
 The style file: unsrt.bst
 Database file #1: dissertation.bib
-You've used 41 entries,
+Warning--entry type for "edan1909patent" isn't style-file defined
+--line 61 of file dissertation.bib
+You've used 40 entries,
             1791 wiz_defined-function locations,
-            682 strings with 11652 characters,
-and the built_in function-call counts, 9698 in all, are:
-= -- 760
-> -- 598
+            674 strings with 11446 characters,
+and the built_in function-call counts, 9461 in all, are:
+= -- 737
+> -- 588
 < -- 9
-+ -- 214
-- -- 173
-* -- 648
-:= -- 1568
-add.period$ -- 129
-call.type$ -- 41
-change.case$ -- 40
++ -- 210
+- -- 170
+* -- 630
+:= -- 1528
+add.period$ -- 125
+call.type$ -- 40
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 437
-empty$ -- 942
-format.name$ -- 173
-if$ -- 2159
+cite$ -- 40
+duplicate$ -- 428
+empty$ -- 920
+format.name$ -- 170
+if$ -- 2109
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 38
-newline$ -- 211
-num.names$ -- 42
-pop$ -- 171
+int.to.str$ -- 40
+missing$ -- 37
+newline$ -- 205
+num.names$ -- 41
+pop$ -- 173
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 189
+skip$ -- 184
 stack$ -- 0
-substring$ -- 395
-swap$ -- 102
+substring$ -- 376
+swap$ -- 101
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 77
-width$ -- 43
-write$ -- 447
+while$ -- 74
+width$ -- 42
+write$ -- 435
+(There was 1 warning)

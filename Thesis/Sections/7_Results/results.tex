@@ -14,9 +14,7 @@ The results from both Ludii tournaments are then compared against the TAG refere
 
 \subsection{Tournament Protocol}
 
-Both Ludii tournaments follow the same round-robin format used in Chapter~\ref{BattleshipInTAG}. Every pair of agents plays 100 games in each direction, agent A as player 1 against agent B as player 2 and then the reverse, for a total of 200 games per matchup. Playing in both directions controls for first-player advantage, which is non-negligible in Battleship since the first player always obtains the first opportunity to fire. All search-based agents are given a thinking-time budget of 1000\,ms per move, matching the budget used in the TAG experiments to ensure comparability. All experiments were conducted on the Dragon2 
-computing cluster at UCLouvain. The cluster consists of 17 computing 
-nodes, each equipped with two Intel Skylake Xeon 6142 processors 
+Both Ludii tournaments follow the same round-robin format used in Chapter~\ref{BattleshipInTAG}. Every pair of agents plays 100 games in each direction, agent A as player 1 against agent B as player 2 and then the reverse, for a total of 200 games per matchup. Playing in both directions controls for first-player advantage, which is non-negligible in Battleship since the first player always obtains the first opportunity to fire. All search-based agents are given a thinking-time budget of 1000\,ms per move, matching the budget used in the TAG experiments to ensure comparability. All experiments were conducted on the Dragon2 computing cluster hosted at the University of Mons (UMons). The cluster consists of 17 computing nodes, each equipped with two Intel Skylake Xeon 6142 processors 
 (16 cores, 2.6 GHz); 15 nodes have 192 GB of RAM and 2 nodes have 
 384 GB, all with 3.3 TB of local scratch space. Two additional nodes 
 equipped with two Intel Skylake Xeon 6126 processors (12 cores, 
@@ -91,11 +89,7 @@ agents.
     \label{fig:ludii_t1_winrates}
 \end{figure}
 
-The results of Tournament 1 are unambiguous. MAST, UCT, and FlatMC 
-all achieve dramatically higher win rates against the Random agent, 
-while the Random agent performs at 0.5\% across all its matchups. 
-MAST dominates the tournament with 79.8\%, followed by UCT at 43.8\% 
-and FlatMC at 25.8\%.
+The results of Tournament 1 are unambiguous. MAST, UCT, and FlatMC all achieve dramatically higher win rates against the Random agent, while the Random agent performs at 0.5\% across all its matchups. MAST dominates the tournament with 99.8\%, followed by UCT at 58.5\% and FlatMC at 41.2\%.
 
 This outcome is the direct empirical signature of the architectural 
 problem identified in Chapter 4. Every \texttt{copyContext()} call 
@@ -123,19 +117,14 @@ performs at near-zero level.
     \label{fig:ludii_t1_heatmap}
 \end{figure}
 
-\subsection{The Role of Simulation Depth}
+\subsection{Differences in Rollout Quality}
 
 An additional observation concerns the relative performance of MAST, 
-UCT, and FlatMC within Tournament 1. Since all three agents 
-effectively play with full information, the differences between them 
-reflect the depth and quality of their search rather than any 
-hidden-information reasoning ability. MAST's move-average statistics 
-allow it to efficiently sequence shots toward historically rewarded 
-cells, producing the strongest performance. UCT builds a search tree 
-but its tree construction overhead reduces its effective exploitation 
-of perfect information relative to MAST. FlatMC, which evaluates 
-each action independently through flat rollouts, exploits the 
-available information least efficiently of the three.
+UCT, and FlatMC within Tournament 1. Since all three agents effectively play with full information due to the information leak, the stark contrast in their performance highlights how their respective rollout strategies exploit this unmasked state space. 
+
+MAST's exceptional win rate (99.8\%) stems from its move-average statistics, which quickly converge toward the actual ship coordinates during simulations. Because the rollouts are executed on copies of the true, fully revealed game state, MAST's action-history table immediately identifies and prioritizes historically rewarded cells (hits), effectively guiding the simulation phases toward rapid victories. 
+
+Conversely, UCT exploits the leaked state far less effectively (58.5\%). Without move-average statistics to bias its simulations, UCT relies on purely uniform random rollouts. These unguided rollouts dilute the critical feedback signal obtained from the unmasked root, as a sequence of random shots has an extremely low probability of stumbling into a winning configuration. This structural difference explains why UCT trails MAST so heavily despite both agents having full access to the board: its tree search cannot compensate for the noise introduced by its random rollout phase, whereas MAST transforms the leaked information into a highly effective simulation heuristic. FlatMC, which evaluates each action independently through flat rollouts, exploits the available information least efficiently of the three (41.2\%).
 
 However, in a game where the true board is fully visible, even a 
 single-step lookahead is sufficient to identify the optimal target 
@@ -144,8 +133,6 @@ gap between search-based agents in Tournament 1 therefore captures
 only second-order differences in sequential planning efficiency, not 
 genuine strategic intelligence. The dominant effect remains 
 information leakage.
-
-\newpage
 
 \subsection{Confirmation of the Problem}
 
@@ -177,17 +164,7 @@ reasoning ability.
     \label{fig:ludii_t2_winrates}
 \end{figure}
 
-The first and most important observation from Tournament 2 is that 
-the artificial performance advantage observed in Tournament 1 is 
-eliminated. UCT+Det, MAST+Det, and FlatMC+Det no longer dominate 
-the Random agent by a large margin. The win rates of the determinized 
-agents against Random converge toward the 50\% region, consistent 
-with agents that are now reasoning about hypothetical worlds rather 
-than exploiting the true hidden state. OSLA+Det emerges as the 
-strongest agent with a win rate of 87.5\%, closely mirroring its 
-performance in the TAG benchmark and confirming that the 
-determinization layer provides a genuine and exploitable signal even 
-for shallow one-step search.
+The first and most important observation from Tournament 2 is that the artificial performance advantage observed in Tournament 1 is eliminated. The determinized agents no longer play with knowledge of the true ship positions; instead, each context copy they receive reflects a coherent hypothetical fleet consistent only with their own past observations. The signature of this change is twofold. First, the ordering of the agents now reflects search quality rather than raw access to the hidden state: OSLA+Det emerges as the strongest agent at 87.5\%, closely mirroring its performance in the TAG benchmark and confirming that the determinization layer provides a genuine and exploitable signal even for shallow one-step search. Second, the Random agent no longer collapses to near-zero: it recovers to 2.3\%, the level expected when its opponents must genuinely reason under uncertainty rather than fire directly at known ship cells. This 2.3\% closely matches the ~2\% observed for Random under Constraint-Based Determinization in TAG (Table 3.1), confirming that the Ludii determinization layer reproduces the leakage-free regime established in the reference benchmark.
 
 This result validates the core claim of Chapter 5: the determinization 
 layer correctly intercepts the raw context copy and replaces it with 
@@ -249,9 +226,7 @@ configuration is found.
 In practice, this overhead does not prevent search-based agents from 
 completing a meaningful number of simulations within the 1000\,ms 
 budget, as evidenced by the non-trivial win rates achieved by 
-MAST+Det and OSLA+Det. However, it likely reduces the effective 
-simulation count relative to Tournament 1, which may partly explain 
-the modest performance of UCT+Det compared to its native counterpart.
+MAST+Det and OSLA+Det. However, it likely reduces the effective simulation count relative to native agents. The lower win rate of UCT+Det compared to native UCT should not be read as a regression caused by this overhead: native UCT played with full information, whereas UCT+Det reasons under genuine uncertainty and against a stronger, fully determinized field (including OSLA+Det). The two figures are therefore not directly comparable. 
 
 
 %%% 6.4 %%%
@@ -264,20 +239,34 @@ Before comparing results numerically, it is important to acknowledge the structu
 FlatMC, and OSLA+Det (re-implemented from TAG). The framework implementations of shared algorithm families such as MCTS differ in their internal details. TAG provided three determinization strategies (Random, Constraint-Based, and Heatmap-Guided), while the Ludii determinization layer implements the Constraint-Based strategy only as its primary mode. These differences make a direct agent-by-agent comparison inappropriate. The comparison is therefore conducted at the level of behavioral patterns.
 
 \subsection{Pattern 1: Convergence to Chance Under No Determinization}
+The most fundamental prediction from Chapter~\ref{BattleshipInTAG} is that 
+simulation-based agents given access to incoherent hidden states should not 
+outperform the Random agent. Under Random Determinization in TAG, all agents 
+performed near chance level, with win rates ranging from 44\% to 53\%, 
+reflecting the absence of any useful signal in the incoherent hypotheses. 
+Under native Ludii without the determinization layer, agents achieve 
+near-perfect win rates against Random. It's not chance, but omniscience: they 
+are not being given incoherent information, they are being given perfect 
+information.
 
-The most fundamental prediction from Chapter~\ref{BattleshipInTAG} is that simulation-based agents given access to incoherent or trivially correct hidden states should not outperform the Random agent. Under Random Determinization in TAG, all agents converged to approximately 50\% win rates. Under native Ludii without the determinization layer, agents converge to near-perfect win rates against Random, which is the opposite of chance: they are not being given incoherent information, they are being given perfect information.
-
-This asymmetry highlights that the Ludii native condition is not a form of Random Determinization but rather a form of omniscient play. Tournament 1 therefore does not replicate the TAG Random Determinization condition; it represents a qualitatively different and more severe failure mode. The convergence to chance that TAG's Random Determinization demonstrated is instead replicated by Tournament 2, where determinized agents lose their information advantage and performance returns toward the 50\% region, consistent with the TAG baseline.
+This asymmetry highlights that the Ludii native condition is not a form of 
+Random Determinization but rather a form of omniscient play. Tournament~1 
+therefore does not replicate the TAG Random Determinization condition; it 
+represents a qualitatively different and more severe failure mode. The 
+elimination of this information advantage is instead what Tournament~2 
+demonstrates: once agents receive coherent hypotheses rather than the true 
+hidden state, their performance reflects genuine reasoning quality under 
+uncertainty rather than privileged access, consistent with the leakage-free 
+baseline established in TAG.
 
 \subsection{Pattern 2: Recovery Under Constraint-Based Determinization}
-Chapter~\ref{BattleshipInTAG} showed that introducing constraint-based determinization produced a dramatic improvement for all simulation-based agents, with OSLA and RMHC reaching win rates well above 50\% against Random. 
-Tournament 2 reproduces this pattern directly. OSLA+Det achieves 87.5\%, consistent with the 87\% observed in TAG under Constraint-Based Determinization, confirming that the behavioral recovery under informed determinization is not framework-specific but reflects a general property of simulation-based search under hidden information. The re-implementation of OSLA in Ludii therefore serves as a direct 
+Chapter~\ref{BattleshipInTAG} showed that introducing constraint-based determinization produced a dramatic improvement against the Random agent for all simulation-based agents, with OSLA and RMHC in particular reaching overall win rates well above 50\%. Tournament 2 reproduces this pattern directly. OSLA+Det achieves 87.5\%, consistent with the 87\% observed in TAG under Constraint-Based Determinization, confirming that the behavioral recovery under informed determinization is not framework-specific but reflects a general property of simulation-based search under hidden information. The re-implementation of OSLA in Ludii therefore serves as a direct 
 empirical bridge between the two frameworks, strengthening the cross-framework comparison beyond a purely qualitative alignment.
 
 \subsection{Pattern 3: The Role of the Random Agent as Invariant Anchor}
-Across all conditions in both TAG and Ludii, the Random agent is the one invariant. Because it never calls a simulation copy method, its behavior is entirely unaffected by what the copy mechanism returns. Its win rate should remain close to 50\% in all conditions where its opponents are reasoning under genuine uncertainty, and should drop substantially below 50\% only when its opponents are reasoning with perfect information.
+Across all conditions in both TAG and Ludii, the Random agent is the one invariant. Because it never calls a simulation copy method, its behavior is entirely unaffected by what the copy mechanism returns. Its win rate should remain unaffected by the quality of the copy mechanism, since it never calls copyContext(). Its absolute win rate therefore reflects only the genuine strength of its opponents under each condition, not any information advantage.
 
-This prediction holds across all four tournaments: TAG Random Determinization (Random $\approx$ 44\%), TAG Constraint-Based (Random $\approx$ 5\% against strong agents), TAG Heatmap-Guided (similar), Ludii Tournament with Native Agents (Random $\ll$ 50\%), and Ludii Tournament with Determinized Agents (Random $\approx$ 50\%). The consistent behavior of the Random agent across frameworks and conditions provides strong evidence that the effects observed are due to the determinization mechanism rather than to confounding factors.
+This prediction holds across all five conditions: TAG Random Determinization (Random $\approx 44\%$), TAG Constraint-Based (Random $\approx 2\%$), TAG Heatmap-Guided (Random $\approx 2\%$), Ludii native agents (Random $\approx 0.5\%$), and Ludii determinized agents (Random $\approx 2.3\%$). The consistent behavior of the Random agent across frameworks and conditions provides strong evidence that the observed effects are due to the determinization mechanism rather than to confounding factors.
 
 
 %%% 6.5 %%%
@@ -294,7 +283,7 @@ Several limitations should be acknowledged. The current evaluation is restricted
 
 The constraint-based hypothesis generator can in principle fail to find a valid ship configuration within its allotted attempts, falling back to random placement. As discussed in Chapter~\ref{BattleshipInTAG}, this fallback rate is low in practice but non-zero. In the Ludii setting, the fallback has the additional effect of reintroducing random determinization for individual copy calls, slightly degrading the consistency of the information provided to the search algorithm.
 
-Additionally, the history reconstruction mechanism in 
+Additionally, the history reconstruction mechanism in \newline
 \texttt{BattleshipDeterminizationAgent} reads hit and miss 
 outcomes after replaying the full move history from the Trial. 
 While this correctly reconstructs the player's observations, 

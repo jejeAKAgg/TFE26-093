@@ -149,7 +149,7 @@ The evaluation follows a round-robin tournament format in which every pair of ag
 
 The benchmark evaluates five simulation-based agents representative of common General Game Playing approaches. The \textbf{Random} agent selects legal actions uniformly at random and never queries the game state, making it the primary control for validating that performance differences are genuinely attributable to determinization quality. \textbf{OSLA} applies a one-step lookahead heuristic, evaluating each legal action through a single forward simulation and selecting the highest-scoring immediate outcome. \textbf{RMHC} maintains a rolling horizon of candidate action sequences and optimizes them through repeated random mutation, relying on many forward simulations per decision step. \textbf{IS-MCTS} builds a search tree across multiple determinizations by sampling a new hypothetical world at each simulation step, aggregating results to identify the best action. \textbf{MAST} extends IS-MCTS by maintaining move-average statistics across rollouts to bias action selection toward historically effective moves.
 
-Each agent is evaluated under all three determinization strategies, and search-based agents are additionally run under three thinking-time budgets of 100\,ms, 500\,ms, 1000\,ms and 5000\,ms per move. This multi-budget design allows the interaction between computational resources and determinization quality to be studied, in particular whether additional simulation time amplifies or compensates for the differences between strategies.
+Each agent is evaluated under all three determinization strategies, and search-based agents are additionally run under four thinking-time budgets of 100\,ms, 500\,ms, 1000\,ms and 5000\,ms per move. This multi-budget design allows the interaction between computational resources and determinization quality to be studied, in particular whether additional simulation time amplifies or compensates for the differences between strategies.
 
 \subsection{Evaluation Metrics}
 
@@ -168,9 +168,7 @@ Together, these metrics make it possible to study not only whether informed dete
 \label{sec:results}
 
 This section presents the experimental results obtained on the TAG 
-Battleship benchmark. All experiments were conducted on the Dragon2 
-computing cluster at UCLouvain. The cluster consists of 17 computing 
-nodes, each equipped with two Intel Skylake Xeon 6142 processors 
+Battleship benchmark. All experiments were conducted on the Dragon2 computing cluster hosted at the University of Mons (UMons). The cluster consists of 17 computing nodes, each equipped with two Intel Skylake Xeon 6142 processors 
 (16 cores, 2.6 GHz); 15 nodes have 192 GB of RAM and 2 nodes have 
 384 GB, all with 3.3 TB of local scratch space. Two additional nodes 
 equipped with two Intel Skylake Xeon 6126 processors (12 cores, 
@@ -299,7 +297,7 @@ prior over ship positions.
 
 The head-to-head matrices confirm this pattern at the pairwise 
 level: under Constraint-Based and Heatmap-Guided Determinization, 
-OSLA and RMHC win over 99\% of their games against IS-MCTS and 
+OSLA and RMHCwin approximately 99\% of their games against IS-MCTS and 
 MAST, while Random loses virtually all matchups against the 
 stronger agents.
 
@@ -334,11 +332,7 @@ This invariance is itself an informative result. For OSLA, the absence
 of a budget effect is expected: since it evaluates only a single forward 
 step per action, additional time beyond the minimum required to assess 
 all legal moves provides no benefit. For IS-MCTS and MAST, the result 
-is more significant: more simulation time does not compensate for the 
-structural limitation of random rollouts. Building a deeper search tree 
-over constraint-consistent worlds still produces unreliable value 
-estimates if the terminal evaluations are guided by uniform random play. 
-This confirms that the bottleneck for these agents is not computational 
+is more significant: more simulation time does not compensate for the limited quality of their rollouts. Building a deeper search tree over constraint-consistent worlds still produces unreliable value estimates when the terminal evaluations are weakly informed . This confirms that the bottleneck for these agents is not computational 
 budget but rollout quality.
 
 \subsection{Game Outcome Analysis}
@@ -409,7 +403,7 @@ simulation count.
 \section{Discussion}
 \label{sec:tag_discussion}
 
-The experiments conducted on the TAG Battleship benchmark highlight the central importance of determinization quality in imperfect-information simulation-based search. The results suggest that simulation consistency plays a more decisive role than search algorithm sophistication in hidden-information environments. Random Determinization frequently generates hypothetical states that contradict previously observed information, forcing search algorithms to reason over implausible worlds and producing no useful strategic signal regardless of how many simulations are run. Constraint-Based Determinization restricts simulations to configurations compatible with known hits and misses, producing search trajectories that accurately reflect the uncertainty actually faced by the player and enabling even shallow agents such as OSLA to perform strongly. The Heatmap-Guided strategy further refines this process by weighting simulations toward statistically plausible regions of the board, providing an additional benefit for tree-search agents at the cost of increased per-copy computational overhead.
+The experiments conducted on the TAG Battleship benchmark highlight the central importance of determinization quality in imperfect-information simulation-based search. The results suggest that simulation consistency plays a more decisive role than search algorithm sophistication in hidden-information environments. Random Determinization frequently generates hypothetical states that contradict previously observed information, forcing search algorithms to reason over implausible worlds and producing no useful strategic signal regardless of how many simulations are run. Constraint-Based Determinization restricts simulations to configurations compatible with known hits and misses, producing search trajectories that accurately reflect the uncertainty actually faced by the player and enabling even shallow agents such as OSLA to perform strongly. The Heatmap-Guided strategy attempts to refine this process by weighting simulations toward statistically plausible regions of the board. In the present experiments, however, this refinement provided no measurable benefit over the constraint-based strategy for any agent (Table 3.1, Figure 3.6), while still incurring a higher per-copy computational overhead.
 
 The experiments also reveal an important observation about the relationship between determinization quality and the search algorithm. One might expect that a more powerful algorithm such as IS-MCTS, which samples many worlds and aggregates their results, would be more robust to poor determinizations than a shallow agent like OSLA. The results show the opposite: under Random Determinization, IS-MCTS performs no better than the Random agent, while OSLA achieves strong performance as soon as the determinizations become constraint-consistent. Aggregating many incoherent simulations does not produce a useful signal; it merely produces a more confident wrong answer. The gains from more sophisticated search are therefore contingent on the quality of the hypothetical worlds those algorithms reason about.
 
