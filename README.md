@@ -30,7 +30,7 @@ TFE26-093/
 │                 ├── battleship_basic   # The random determinization
 │                 ├── battleship_best    # The heatmap guided det.
 │                 └── battleship_smart   # The constraint-based det.
-├── Ludii/
+├── Ludii/               # Git Submodules N°2
 │ ├── BENCHMARKS
 │     ├── figs           # The different plots
 │     ├── logs           # The logs output from the CECI clusters run
