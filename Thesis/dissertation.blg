@@ -16,34 +16,34 @@ Warning--entry type for "edan1909patent" isn't style-file defined
 --line 61 of file dissertation.bib
 You've used 40 entries,
             1791 wiz_defined-function locations,
-            674 strings with 11446 characters,
-and the built_in function-call counts, 9461 in all, are:
-= -- 737
-> -- 588
+            671 strings with 11335 characters,
+and the built_in function-call counts, 9419 in all, are:
+= -- 730
+> -- 584
 < -- 9
-+ -- 210
-- -- 170
-* -- 630
-:= -- 1528
-add.period$ -- 125
++ -- 209
+- -- 169
+* -- 627
+:= -- 1519
+add.period$ -- 123
 call.type$ -- 40
 change.case$ -- 39
 chr.to.int$ -- 0
 cite$ -- 40
 duplicate$ -- 428
 empty$ -- 920
-format.name$ -- 170
-if$ -- 2109
+format.name$ -- 169
+if$ -- 2099
 int.to.chr$ -- 0
 int.to.str$ -- 40
 missing$ -- 37
-newline$ -- 205
+newline$ -- 203
 num.names$ -- 41
-pop$ -- 173
+pop$ -- 172
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 184
+skip$ -- 188
 stack$ -- 0
 substring$ -- 376
 swap$ -- 101
@@ -54,5 +54,5 @@ type$ -- 0
 warning$ -- 0
 while$ -- 74
 width$ -- 42
-write$ -- 435
+write$ -- 430
 (There was 1 warning)
