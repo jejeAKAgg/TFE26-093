@@ -46,7 +46,6 @@ TFE26-093/
 │             ├── ContextDeterminizer.java   # Handles determinization
 │             ├── DeterminizationEngine.java   # Port of TAG's Constraint-Based Determinization we made
 │             └── DeterminizedAgent.java   # The Generic Wrapper
-├── venv/                      # The Python env for the Hallucinator tool
 ├── Lechat_50351800_2026.pdf   # The final PDF
 ├── README.md                  # You are here!
 └── run_hallucinator.py        # The Open-Source tool used by the faculty
@@ -67,6 +66,23 @@ git clone --recursive <REPOSITORY_URL>
 ---
 
 ## ⚠️ Note on Hallucinator Validation
+
+First, do not forget to init a venv and install the correct dependencies
+
+```bash
+# Creating venv
+python3 -m venv venv
+
+# Activating the venv
+source venv/bin/activate
+
+# Installing dependencies
+pip install --quiet --upgrade pip
+pip install hallucinator
+
+# Then run the .py at the root of this repo
+python run_hallucinator.py
+```
 
 The bibliography (`dissertation.bib`) has been pre-screened using the faculty's `hallucinator` validation tool.
 
